@@ -65,6 +65,7 @@ public class NetworkManagerReligion : NetworkManager
         if (SceneManager.GetActiveScene().path != menuScene)
         {
             conn.Disconnect();
+
             return;
         }
     }

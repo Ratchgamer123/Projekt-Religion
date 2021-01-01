@@ -88,8 +88,8 @@ public class NetworkRoomPlayerReligion : NetworkBehaviour
         {
             playerNameTexts[i].text = Room.RoomPlayers[i].DisplayName;
             playerReadyTexts[i].text = Room.RoomPlayers[i].IsReady ?
-                "<color=green>Ready</color>" :
-                "<color=red>Not Ready</color>";
+                "<color=green>Bereit</color>" :
+                "<color=red>Nicht bereit</color>";
         }
     }
 

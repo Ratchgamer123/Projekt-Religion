@@ -33,6 +33,7 @@ public class ProjectileGunsTest : NetworkBehaviour
     //Reference
     public Camera fpsCam;
     public Transform attackPoint;
+    public Animator animator;
 
     //Graphics
     public GameObject muzzleFlash;
@@ -168,11 +169,12 @@ public class ProjectileGunsTest : NetworkBehaviour
     private void Reload()
     {
         reloading = true;
+        animator.SetBool("Reloading", true);
         Invoke("ReloadFinished", reloadTime); //Invoke ReloadFinished function with your reloadTime as delay
     }
     private void ReloadFinished()
     {
-        //Fill magazine
+        animator.SetBool("Reloading", false);
         bulletsLeft = magazineSize;
         reloading = false;
     }
